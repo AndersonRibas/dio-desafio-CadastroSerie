@@ -1,5 +1,4 @@
 ﻿using CadastroSeries;
-using CadastroSeries.Classes;
 
 class Program
 {
