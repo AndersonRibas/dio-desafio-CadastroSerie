@@ -7,34 +7,35 @@ namespace CadastroSeries
     public class SerieRepositorio : IRepositorio<Serie>
     {
         private List<Serie> listaSerie = new List<Serie>();
+
         public void Atualizar(int id, Serie objeto)
         {
-            throw new NotImplementedException();
+            listaSerie[id] = objeto;
         }
 
         public void Excluir(int id)
         {
-            throw new NotImplementedException();
+           listaSerie[id].Excluir();
         }
 
-        public void Inseri(Serie objeto)
+        public void Inserir(Serie objeto)
         {
-            throw new NotImplementedException();
+           listaSerie.Add(objeto);
         }
 
-        public List<Serie> Lista()
+        public List<Serie> Listar()
         {
-            throw new NotImplementedException();
+           return listaSerie;
         }
 
         public int ProximoId()
         {
-            throw new NotImplementedException();
+            return listaSerie.Count;
         }
 
-        public Serie RetornaPorId(int id)
+        public Serie RetornarPorId(int id)
         {
-            throw new NotImplementedException();
+            return listaSerie[id];
         }
     }
 }

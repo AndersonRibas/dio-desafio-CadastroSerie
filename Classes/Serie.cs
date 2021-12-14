@@ -7,6 +7,7 @@ namespace CadastroSeries
         private string Titulo { get; set; }
         private string Descricao { get; set; }
         private int Ano { get; set; }
+        private bool Excluido {get; set;}
 
 
 
@@ -17,6 +18,7 @@ namespace CadastroSeries
            this.Titulo = titulo;
            this.Descricao = descricao;
            this.Ano = ano;
+           this.Excluido = false;
         }
 
         public override string ToString()
@@ -31,14 +33,19 @@ namespace CadastroSeries
 
         }
 
-        public string RetornaTitulo()
+        public string RetornarTitulo()
         {
             return this.Titulo;
         }
 
-        public int RetornaId()
+        public int RetornarId()
         {
             return this.Id;
+        }
+
+        public void Excluir()
+        {
+            this.Excluido = true;
         }
     }
 }
