@@ -28,7 +28,8 @@ namespace CadastroSeries
             retorno += "Gênero: " + this.Genero + Environment.NewLine;
             retorno += "Titulo: " + this.Titulo + Environment.NewLine; 
             retorno += "Descricao: " + this.Genero + Environment.NewLine;
-            retorno += "Ano de Início: " + this.Ano;
+            retorno += "Ano de Início: " + this.Ano + Environment.NewLine;
+            retorno += "Excluido: " + this.Excluido;
             return retorno;
 
         }
@@ -41,6 +42,11 @@ namespace CadastroSeries
         public int RetornarId()
         {
             return this.Id;
+        }
+
+        public bool RetornarExcluido()
+        {
+            return this.Excluido;
         }
 
         public void Excluir()
